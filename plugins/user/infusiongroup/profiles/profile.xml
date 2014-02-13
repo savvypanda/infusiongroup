@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: profile.xml 20156 2011-01-07 13:10:16Z eddieajau $ -->
+<form>
+	<fields name="infusionsoft">
+		<fieldset name="infusionsoft"
+			label="Infusionsoft User Information"
+		>
+            <field
+                    name="is_id"
+                    type="text"
+                    label="Infusionsoft Person ID"
+                    description="The unique identifier assigned to this user in Infusionsoft"
+                 />        
+			<field
+					name="is_current_tags"
+					type="textarea"
+					label="Current Infusionsoft Tags"
+					description="These are the tags currently assigned to this user in Infusionsoft. These are updated every time the user logs in.">
+			</field>
+			<field
+					name="is_activity_log"
+					type="textarea"
+					label="Infusionsoft Activity Log"
+					description="Any time anything changes on the Joomla site regarding the Infusionsoft integration it is recorded in this log.">
+			</field>
+		</fieldset>
+	</fields>
+</form>

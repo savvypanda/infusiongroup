@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>InfusionGroup</name>
+	<creationDate>March 2013</creationDate>
+	<author>Levi Carter</author>
+	<authorEmail>levi@mangotreemedia.com</authorEmail>
+	<authorUrl>http://www.mangotreemedia.com</authorUrl>
+	<copyright>Copyright 2013 Mango Tree Media</copyright>
+	<license>GPL version 3 or any later version</license>
+	<version>0.1.0</version>
+	<description>COM_INFUSIONGROUP_INSTALL_DESCRIPTION</description>
+
+	<install><sql>
+		<file driver="mysql" charset="utf8">sql/install.infusiongroup.mysql.sql</file>
+	</sql></install>
+	<uninstall><sql>
+		<file driver="mysql" charset="utf8">sql/uninstall.infusiongroup.mysql.sql</file>
+	</sql></uninstall>
+	<update><schemas>
+		<schemapath type="mysql">sql/updates/mysql</schemapath>
+	</schemas></update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>infusiongroup.php</filename>
+		<filename>dispatcher.php</filename>
+		<folder>views</folder>
+		<folder>controllers</folder>
+	</files>
+
+	<administration>
+		<menu>InfusionGroup</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>infusiongroup.php</filename>
+			<filename>dispatcher.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_infusiongroup.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_infusiongroup.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
